@@ -65,8 +65,10 @@ function capturePhoto(){
 
 function uploadPhoto(data){
 // this is where you would send the image file to server
+	
+	var image = document.getElementById('cameraPic');
 
-	cameraPic.src = "data:image/jpeg;base64," + data;
+	image.src = "data:image/jpeg;base64," + data;
 	// Successful upload to the server
 	/*
 	setTimeout(function() {
