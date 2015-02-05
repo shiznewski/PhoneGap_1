@@ -59,7 +59,7 @@ function alertDismissed() {
 }
 
 
-function capturePhoto(){
+function capturePhoto2(){
     navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
 }
 
