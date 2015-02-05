@@ -60,7 +60,7 @@ function alertDismissed() {
 
 
 function capturePhoto2(){
-    navigator.camera.getPicture(uploadPhoto,null,{sourceType:0,quality:60});
+    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,destinationType: destinationType.DATA_URL,quality:60});
 }
 
 function uploadPhoto(data){
