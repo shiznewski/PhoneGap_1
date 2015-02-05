@@ -60,7 +60,7 @@ function alertDismissed() {
 
 
 function capturePhoto(){
-    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
+    navigator.camera.getPicture(uploadPhoto,null, {quality: 50, destinationType: destinationType.DATA_URL });
 }
 
 function uploadPhoto(data){
@@ -69,18 +69,7 @@ function uploadPhoto(data){
 	var image = document.getElementById('cameraPic');
 
 	image.src = "data:image/jpeg;base64," + data;
-	// Successful upload to the server
-	/*
-	setTimeout(function() {
-    // do your thing here!
-		navigator.notification.alert(
-		'Your Photo has been uploaded',  // message
-		okay,                           // callback
-	    'Photo Uploaded',              // title
-	    'OK'                          // buttonName
-	);
-	}, 0);
-	*/
+
 
 	// upload has failed Fail
 
