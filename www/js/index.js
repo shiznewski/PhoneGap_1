@@ -65,10 +65,17 @@ function capturePhoto2(){
 
 function uploadPhoto(data){
 // this is where you would send the image file to server
-	
-	var image = document.getElementById('cameraPic');
+      var smallImage = document.getElementById('cameraPic');
 
-	image.src = "data:image/jpeg;base64," + data;
+      // Unhide image elements
+      //
+      //smallImage.style.display = 'block';
+
+      // Show the captured photo
+      // The in-line CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + data;	
+
 	// Successful upload to the server
 	/*
 	setTimeout(function() {
