@@ -34,6 +34,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+		navigator.notification.alert('You are the winner!',  alertDismissed, 'Game Over', 'Done');
+
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,3 +49,11 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+function showmessage(){
+navigator.notification.alert('Button Click',  alertDismissed, 'Game Over', 'Done');
+}
+
+function alertDismissed() {
+    // do something
+}
