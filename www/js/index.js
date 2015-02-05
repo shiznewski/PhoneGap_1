@@ -68,12 +68,15 @@ function uploadPhoto(data){
 
 	cameraPic.src = "data:image/jpeg;base64," + data;
 	// Successful upload to the server
-	navigator.notification.alert(
+	setTimeout(function() {
+    // do your thing here!
+		navigator.notification.alert(
 		'Your Photo has been uploaded',  // message
 		okay,                           // callback
 	    'Photo Uploaded',              // title
 	    'OK'                          // buttonName
 	);
+	}, 0);
 
 	// upload has failed Fail
 
